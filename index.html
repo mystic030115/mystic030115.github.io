@@ -3,96 +3,448 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Harry Kang — Industrial Engineering student at Seoul National University." />
-  <title>Harry Kang</title>
+  <meta name="description" content="Hyun Kang — Industrial Engineering student at Seoul National University." />
+  <title>Hyun Kang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <div class="page">
-    <header class="site-header">
-      <nav class="site-nav" aria-label="Primary">
-        <ul>
+  <header class="nav-bar">
+    <div class="nav-bar__inner">
+      <a class="nav-bar__wordmark" href="#home">Hyun Kang</a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list">
+          <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#resume">Resume</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#ai-usage">AI Usage</a></li>
         </ul>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main id="main-content">
-      <section class="hero" aria-labelledby="site-title">
-        <img
-          class="profile-photo"
-          src="assets/profile.png"
-          alt="Portrait of Harry Kang"
-          width="160"
-          height="160"
-        />
-        <div class="hero-text">
-          <h1 id="site-title">Harry Kang</h1>
-          <p class="subtitle">Seoul National University · Industrial Engineering</p>
-          <p class="intro">
-            Welcome to my personal website. I study industrial engineering at SNU
-            and use this page to share a brief introduction and my resume.
-          </p>
-        </div>
-      </section>
-
-      <section id="about" aria-labelledby="about-heading">
-        <h2 id="about-heading">About Me</h2>
-        <div class="card">
-          <p>
-            Hello, I am Harry Kang, an Industrial Engineering student at Seoul
-            National University. I am interested in applying analytical and
-            systems thinking to practical problems.
-          </p>
-          <p>
-            This site is hosted on GitHub Pages and serves as a simple home for
-            my profile and contact information.
-          </p>
-        </div>
-      </section>
-
-      <section id="resume" aria-labelledby="resume-heading">
-        <h2 id="resume-heading">Resume</h2>
-        <div class="card">
-          <p>
-            Download my CV for details on my education, experience, and skills.
-          </p>
-          <a class="button-link" href="assets/cv.pdf" download>
-            Download CV (PDF)
+  <section id="home" class="hero-band" aria-labelledby="site-title">
+    <div class="hero-band__stickers" aria-hidden="true">
+      <span class="sticker sticker--sky"></span>
+      <span class="sticker sticker--purple"></span>
+      <span class="sticker sticker--pink"></span>
+      <span class="sticker sticker--orange"></span>
+      <span class="sticker sticker--teal"></span>
+      <span class="sticker sticker--green"></span>
+    </div>
+    <div class="hero-band__inner">
+      <img
+        class="profile-photo"
+        src="assets/profile.png"
+        alt="Portrait of Hyun Kang"
+        width="168"
+        height="168"
+      />
+      <div class="hero-band__content">
+        <span class="badge-pill">Industrial Engineering · AI · SNU</span>
+        <h1 id="site-title">Hyun Kang</h1>
+        <p class="hero-band__intro">
+          Welcome to my personal website. I study industrial engineering at Seoul
+          National University and use this page to share a brief introduction and
+          my resume.
+        </p>
+        <div class="hero-band__actions">
+          <a class="button-primary" href="assets/cv.pdf" download>
+            Download CV
           </a>
+          <a class="button-secondary" href="#contact">Get in touch</a>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <section id="contact" aria-labelledby="contact-heading">
-        <h2 id="contact-heading">Contact</h2>
-        <div class="card">
-          <ul class="contact-list">
+  <main id="main-content" class="page">
+    <section id="about" class="content-section" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <div class="feature-card">
+        <div class="feature-card__accent" aria-hidden="true">
+          <span class="feature-card__dot feature-card__dot--purple"></span>
+          <span class="feature-card__dot feature-card__dot--teal"></span>
+          <span class="feature-card__dot feature-card__dot--orange"></span>
+        </div>
+        <p>
+          Hello, I am Hyun Kang, an Industrial Engineering student at Seoul
+          National University with a double major in Artificial Intelligence. I
+          am interested in applying analytical and systems thinking to practical
+          problems in operations research and AI.
+        </p>
+        <h3 class="feature-card__title">Education</h3>
+        <ul class="background-list">
+          <li>
+            <span class="background-list__period">2019 – 2021</span>
+            <span class="background-list__detail">
+              Seoul Science High School
+            </span>
+          </li>
+          <li>
+            <span class="background-list__period">2022 – Present</span>
+            <span class="background-list__detail">
+              Seoul National University — B.S. in Industrial Engineering;
+              Double Major in Artificial Intelligence
+            </span>
+          </li>
+        </ul>
+        <h3 class="feature-card__title">Experience</h3>
+        <ul class="background-list">
+          <li>
+            <span class="background-list__period">Nov. 2025 – Mar. 2026</span>
+            <span class="background-list__detail">
+              Machine Learning &amp; Software Engineer Intern, Waddle Corp.
+            </span>
+          </li>
+          <li>
+            <span class="background-list__period">Feb. 2024 – Aug. 2025</span>
+            <span class="background-list__detail">
+              Military Service, NCOA Korea
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="content-section" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <div class="feature-card">
+        <div class="feature-card__accent" aria-hidden="true">
+          <span class="feature-card__dot feature-card__dot--teal"></span>
+          <span class="feature-card__dot feature-card__dot--purple"></span>
+          <span class="feature-card__dot feature-card__dot--orange"></span>
+        </div>
+        <p>
+          Languages and frameworks I use fluently in coursework, research, and
+          industry projects.
+        </p>
+        <ul class="skill-list" aria-label="Programming skills">
+          <li class="skill-tag">Java</li>
+          <li class="skill-tag">C++</li>
+          <li class="skill-tag">Python</li>
+          <li class="skill-tag">React</li>
+          <li class="skill-tag">JS</li>
+          <li class="skill-tag">TS</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="courses" class="content-section" aria-labelledby="courses-heading">
+      <h2 id="courses-heading">Planned Courses</h2>
+      <div class="course-plan">
+        <article class="feature-card">
+          <h3 class="feature-card__title">2026-2</h3>
+          <ul class="course-list">
             <li>
-              Email:
-              <a href="mailto:mystic030115@snu.ac.kr">mystic030115@snu.ac.kr</a>
+              <span class="course-list__name">자료구조</span>
+              <span class="course-list__credits">3 credits</span>
             </li>
             <li>
-              GitHub:
-              <a href="https://github.com/mystic030115" rel="noopener noreferrer">
-                github.com/mystic030115
-              </a>
+              <span class="course-list__name">수학적 알고리즘 2</span>
+              <span class="course-list__credits">3 credits</span>
+            </li>
+            <li>
+              <span class="course-list__name">생산관리</span>
+              <span class="course-list__credits">3 credits</span>
+            </li>
+            <li>
+              <span class="course-list__name">산업텍스트애널리틱스</span>
+              <span class="course-list__credits">3 credits</span>
+            </li>
+            <li>
+              <span class="course-list__name">최적화 알고리즘</span>
+              <span class="course-list__credits">3 credits</span>
+            </li>
+            <li>
+              <span class="course-list__name">정수최적화</span>
+              <span class="course-list__credits">3 credits</span>
+            </li>
+            <li>
+              <span class="course-list__name">조합최적화</span>
+              <span class="course-list__credits">3 credits</span>
             </li>
           </ul>
-        </div>
-      </section>
-    </main>
+          <p class="course-total">Overall 21 credits</p>
+        </article>
 
-    <footer class="site-footer">
-      <p>&copy; <span id="year"></span> Harry Kang. All rights reserved.</p>
-    </footer>
-  </div>
+        <article class="feature-card">
+          <h3 class="feature-card__title">2027-1</h3>
+          <ul class="course-list">
+            <li>
+              <span class="course-list__name">현대대수학 1</span>
+              <span class="course-list__credits">3 credits</span>
+            </li>
+            <li>
+              <span class="course-list__name">최적화의 수학적 이해 및 계산</span>
+              <span class="course-list__credits">3 credits</span>
+            </li>
+            <li>
+              <span class="course-list__name">수학적 알고리즘 1</span>
+              <span class="course-list__credits">3 credits</span>
+            </li>
+            <li>
+              <span class="course-list__name">인공지능 이론 및 응용 세미나</span>
+              <span class="course-list__credits">3 credits</span>
+            </li>
+            <li>
+              <span class="course-list__name">딥러닝의 기초</span>
+              <span class="course-list__credits">3 credits</span>
+            </li>
+            <li>
+              <span class="course-list__name">인공지능</span>
+              <span class="course-list__credits">3 credits</span>
+            </li>
+          </ul>
+          <p class="course-total">Overall 21 credits</p>
+        </article>
+
+        <article class="feature-card">
+          <h3 class="feature-card__title">2027-2</h3>
+          <ul class="course-list">
+            <li>
+              <span class="course-list__name">실변수함수론</span>
+              <span class="course-list__credits">3 credits</span>
+            </li>
+            <li>
+              <span class="course-list__name">편미분방정식</span>
+              <span class="course-list__credits">3 credits</span>
+            </li>
+            <li>
+              <span class="course-list__name">측도이론 및 확률계산</span>
+              <span class="course-list__credits">3 credits</span>
+            </li>
+            <li>
+              <span class="course-list__name">통계학실험</span>
+              <span class="course-list__credits">1 credit</span>
+            </li>
+            <li>
+              <span class="course-list__name">초급프랑스어</span>
+              <span class="course-list__credits">2 credits</span>
+            </li>
+            <li>
+              <span class="course-list__name">초급스페인어</span>
+              <span class="course-list__credits">2 credits</span>
+            </li>
+          </ul>
+          <p class="course-total">Overall 14 credits</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="content-section" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <div class="project-grid">
+        <article class="feature-card">
+          <div class="feature-card__accent" aria-hidden="true">
+            <span class="feature-card__dot feature-card__dot--purple"></span>
+            <span class="feature-card__dot feature-card__dot--teal"></span>
+          </div>
+          <h3 class="feature-card__title">SNU IE DSBA Lab</h3>
+          <p class="feature-card__meta">Mar. 2026 – Present</p>
+          <p>
+            Undergraduate research student at the Data Science &amp; Business
+            Analytics Lab, Department of Industrial Engineering, Seoul National
+            University.
+          </p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__accent" aria-hidden="true">
+            <span class="feature-card__dot feature-card__dot--teal"></span>
+            <span class="feature-card__dot feature-card__dot--orange"></span>
+          </div>
+          <h3 class="feature-card__title">SNU Math OptA Lab</h3>
+          <p class="feature-card__meta">May 2026 – Present</p>
+          <p>
+            Undergraduate research student at the Optimization &amp; Analytics
+            Lab, Department of Mathematical Sciences, Seoul National University.
+          </p>
+        </article>
+        <article class="feature-card feature-card--elevated">
+          <div class="feature-card__accent" aria-hidden="true">
+            <span class="feature-card__dot feature-card__dot--orange"></span>
+            <span class="feature-card__dot feature-card__dot--purple"></span>
+          </div>
+          <h3 class="feature-card__title">OGC 2026</h3>
+          <p class="feature-card__meta">Jun. 2026 – Present</p>
+          <p>
+            Participating in OGC 2026, an ongoing contest focused on operations
+            and analytics problem solving.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="resume" class="content-section" aria-labelledby="resume-heading">
+      <h2 id="resume-heading">Resume</h2>
+      <div class="feature-card feature-card--elevated">
+        <div class="feature-card__accent" aria-hidden="true">
+          <span class="feature-card__dot feature-card__dot--teal"></span>
+          <span class="feature-card__dot feature-card__dot--orange"></span>
+        </div>
+        <p>
+          Download my CV for details on my education, experience, and skills.
+        </p>
+        <a class="button-primary" href="assets/cv.pdf" download>
+          Download CV (PDF)
+        </a>
+      </div>
+    </section>
+
+    <section id="contact" class="content-section" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <div class="feature-card">
+        <div class="feature-card__accent" aria-hidden="true">
+          <span class="feature-card__dot feature-card__dot--purple"></span>
+          <span class="feature-card__dot feature-card__dot--teal"></span>
+        </div>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-list__label">Phone</span>
+            <a href="tel:+821053199389">010-5319-9389</a>
+          </li>
+          <li>
+            <span class="contact-list__label">SNU</span>
+            <a href="mailto:mystic030115@snu.ac.kr">mystic030115@snu.ac.kr</a>
+          </li>
+          <li>
+            <span class="contact-list__label">Personal</span>
+            <a href="mailto:mystic030115@gmail.com">mystic030115@gmail.com</a>
+          </li>
+          <li>
+            <span class="contact-list__label">GitHub</span>
+            <a href="https://github.com/mystic030115" rel="noopener noreferrer">
+              github.com/mystic030115
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="ai-usage" class="content-section" aria-labelledby="ai-usage-heading">
+      <h2 id="ai-usage-heading">AI Usage</h2>
+      <details class="ai-usage-toggle feature-card">
+        <summary class="ai-usage-toggle__summary">View AI usage details</summary>
+        <div class="ai-usage-toggle__content">
+          <p class="ai-usage-line"><strong>Tool:</strong> Cursor</p>
+          <p class="ai-usage-line"><strong>Prompt:</strong></p>
+          <ol class="prompt-list">
+            <li>
+              Build a static personal website in the repo root. Use
+              assets/profile.jpg or assets/profile.png as the profile image.
+              Link assets/cv.pdf from the CV or Resume section. Keep the site
+              simple and compatible with GitHub Pages. Do not use a backend or
+              paid external API. Make the page responsive and accessible. After
+              editing, explain what files you changed and how I can preview the
+              site locally.
+            </li>
+            <li>
+              Launch the local dev server so that I can preview your work.
+            </li>
+            <li>Commit your work and push main.</li>
+            <li>
+              I've uploaded DESIGN.md in this repo. Read this file and make the
+              webpage follow this theme.
+            </li>
+            <li>
+              I want to add my background to "About Me" section. I went to Seoul
+              Science High School(2019~2021), and Seoul National
+              University(2022~), and my Double Major is AI. Also I did my
+              internship at Waddle Corp. at 2025.11~2026.03. Also at Contact,
+              insert my phone number 010-5319-9389, and my second email address
+              mystic030115@gmail.com. Also at Projects, show that I am
+              participating as a undergraduate student researcher at 2 labs that
+              i mentioned at my cv. I also am participating at a contest named
+              OGC 2026 from 2026.06~current.
+            </li>
+            <li>
+              My name is Hyun Kang, not Harry Kang. Replace my name.
+            </li>
+            <li>
+              Also I ended my military service @ NCOA Korea during
+              2024.02~2025.08. Add this information
+            </li>
+            <li>
+              Add a brief skills section in my homepage. I can fluently use
+              JAVA, C++, Python, REACT, JS, TS. Also I need all navigation
+              menus linking to each section in my homepage.
+            </li>
+            <li>
+              Add a section listing coursed that I am planning to take. 2026-2:
+              자료구조, 수학적 알고리즘 2, 생산관리, 산업텍스트애널리틱스, 최적화
+              알고리즘, 정수최적화, 조합최적화. Each 3 credits, Overall 21 Credits.
+              2027-1: 현대대수학 1, 최적화의 수학적 이해 및 계산, 수학적 알고리즘 1,
+              인공지능 이론 및 응용 세미나, 딥러닝의 기초, 인공지능 each 3 dredits,
+              overall 21 credits. 2027-2: 실변수함수론, 편미분방정식, 측도이론 및
+              확률계산, 통계학실험, 초급프랑스어, 초급스페인어 credits each 3, 3, 3,
+              1, 2, 2 Overall 14 credits.
+            </li>
+            <li>I need navigation menus linking to each section.</li>
+            <li>
+              Add a short AI Usage section to my website as a toggle. write Tool:
+              Cursor and next line: Prompt: and write all the prompts I inserted
+              in Cursor to build this website.
+            </li>
+          </ol>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <nav class="footer-nav" aria-label="Footer">
+        <ul class="footer-nav__list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#ai-usage">AI Usage</a></li>
+        </ul>
+      </nav>
+      <p>&copy; <span id="year"></span> Hyun Kang. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const navToggle = document.querySelector(".nav-toggle");
+    const siteNav = document.getElementById("site-nav");
+
+    navToggle.addEventListener("click", () => {
+      const isOpen = siteNav.classList.toggle("site-nav--open");
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    siteNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        siteNav.classList.remove("site-nav--open");
+        navToggle.setAttribute("aria-expanded", "false");
+      });
+    });
   </script>
 </body>
 </html>
