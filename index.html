@@ -3,17 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Harry Kang — Industrial Engineering student at Seoul National University." />
   <title>Harry Kang</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Harry Kang</h1>
-  <p>Seoul National University, Industrial Engineering</p>
-  <p>This is my personal GitHub Pages website.</p>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <h2>About Me</h2>
-  <p>Hello, I am Harry Kang, an Industrial Engineering student at Seoul National University.</p>
+  <div class="page">
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <h2>Contact</h2>
-  <p>Email: mystic030115@snu.ac.kr</p>
+    <main id="main-content">
+      <section class="hero" aria-labelledby="site-title">
+        <img
+          class="profile-photo"
+          src="assets/profile.png"
+          alt="Portrait of Harry Kang"
+          width="160"
+          height="160"
+        />
+        <div class="hero-text">
+          <h1 id="site-title">Harry Kang</h1>
+          <p class="subtitle">Seoul National University · Industrial Engineering</p>
+          <p class="intro">
+            Welcome to my personal website. I study industrial engineering at SNU
+            and use this page to share a brief introduction and my resume.
+          </p>
+        </div>
+      </section>
+
+      <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Me</h2>
+        <div class="card">
+          <p>
+            Hello, I am Harry Kang, an Industrial Engineering student at Seoul
+            National University. I am interested in applying analytical and
+            systems thinking to practical problems.
+          </p>
+          <p>
+            This site is hosted on GitHub Pages and serves as a simple home for
+            my profile and contact information.
+          </p>
+        </div>
+      </section>
+
+      <section id="resume" aria-labelledby="resume-heading">
+        <h2 id="resume-heading">Resume</h2>
+        <div class="card">
+          <p>
+            Download my CV for details on my education, experience, and skills.
+          </p>
+          <a class="button-link" href="assets/cv.pdf" download>
+            Download CV (PDF)
+          </a>
+        </div>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <div class="card">
+          <ul class="contact-list">
+            <li>
+              Email:
+              <a href="mailto:mystic030115@snu.ac.kr">mystic030115@snu.ac.kr</a>
+            </li>
+            <li>
+              GitHub:
+              <a href="https://github.com/mystic030115" rel="noopener noreferrer">
+                github.com/mystic030115
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Harry Kang. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
